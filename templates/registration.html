@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 35%, rgba(0,212,255,1) 100%);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 35%, rgba(0,212,255,1) 100%);
             margin: 0;
             padding: 0;
             background-color: white;
@@ -103,7 +103,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 35%, rgb
 <body>
     <div class="form-container">
         <h1>Registration</h1>
-        <form>
+        <form id="formmm">
           
             <div class="form-group">
                 <div class="half-width">
@@ -162,6 +162,19 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 35%, rgb
             <button type="submit">Register</button>
         </form>
     </div>
+
+    <script>
+        function validateForm(e) {
+            // e.preventDefault();
+            let gender = document.querySelector('input[name="gender"]:checked')?
+            document.querySelectory('input[name="gender"]:checked').value : null;
+        }
+
+        let form = document.getElementById("formmm")
+        form.addEventListener('submit', validateForm);
+
+
+    </script>
 </body>
 </html>
 
